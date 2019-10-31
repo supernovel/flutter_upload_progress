@@ -1,0 +1,19 @@
+name: flutter_upload_progress
+description: File upload and download with progress callback.
+version: 0.0.1
+author: supernovel(ekfueh@naver.com)
+homepage: github.com/supernovel/flutter_upload_progress
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http : any
+  path_provider: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.3.0
