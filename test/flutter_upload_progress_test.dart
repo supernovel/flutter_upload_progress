@@ -15,7 +15,9 @@ void main() {
 
     var progressService = ProgressService(client: client);
     var response = await progressService.upload(
-        method: 'post', url: 'https://example.com/upload',);
+      method: 'post',
+      url: 'https://example.com/upload',
+    );
 
     expect(response.body, equals('Request body was "hello, world"'));
   });
@@ -44,9 +46,9 @@ void main() {
     });
 
     var progressService = ProgressService(client: client);
-    var file =
+    var filepath =
         await progressService.download(url: 'https://example.com/upload');
 
-    expect(file.path, equals('Request body was "hello, world"'));
+    expect(filepath, equals('Request body was "hello, world"'));
   });
 }

@@ -124,7 +124,7 @@ class ProgressService {
         await (_client == null ? request.send() : _client.send(request)));
   }
 
-  Future<File> download(
+  Future<String> download(
       {String url,
       String filename,
       Map<String, String> headers,
@@ -166,7 +166,7 @@ class ProgressService {
       },
       onDone: () {
         raf.closeSync();
-        completer.complete(file);
+        completer.complete(file.path);
       },
       onError: (e) {
         raf.closeSync();
